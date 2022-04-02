@@ -46,6 +46,7 @@ int main(){
 	string input,stack="";
 	cout<<"enter the grammer to check shift reduce parser : ";
 	cin>>input;
+	cout<<endl<<endl<<setw(15)<<"stack"<<setw(15)<<"input"<<setw(15)<<"action"<<endl<<endl;
 	for(;;){
 		if(input.empty()){
 			int counter=0,flag=0;
@@ -78,8 +79,9 @@ int main(){
 		}
 		else if(stack.empty()){
 			stack=stack+input[0];
+			string temp="";
+			temp+=input[0];
 			input.erase(input.begin());
-			//print(stack,input);
 		}
 		else if(!stack.empty()){
 			int counter=0,flag=0;
